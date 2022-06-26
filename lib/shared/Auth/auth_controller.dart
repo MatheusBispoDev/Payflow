@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 import '../models/user_model.dart';
 
 class AuthController {
@@ -16,6 +17,7 @@ class AuthController {
       Navigator.pushReplacementNamed(
         context,
         '/home',
+        arguments: user,
       );
     } else {
       Navigator.pushReplacementNamed(
